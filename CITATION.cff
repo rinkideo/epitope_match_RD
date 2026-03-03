@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Epitope_Match_RD: HIV Epitope Identity Matching Pipeline"
+version: 1.0.0
+doi: 10.5281/zenodo.18852547
+date-released: 2026-03-03
+authors:
+  - family-names: "Deo"
+    given-names: "Rinki"
+    affiliation: "Brigham and Women's Hospital / Harvard Medical School"
+license: MIT
