@@ -19,5 +19,5 @@ Edit paths inside `slurm_epimatch_array.sh` for:
 - sample list
 - output directory
 
-## Python usage (single sample)
+## Python usage
 python epitope_match_80perc_th.py --sample_id SampleA --r1 R1.fastq.gz --r2 R2.fastq.gz --ref data/reference/HIV_Reference.fasta --epitopes data/Epitopes_HXB2_Coordinates.xlsx --output-dir results/SampleA_out
