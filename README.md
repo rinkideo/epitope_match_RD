@@ -1,4 +1,4 @@
-# Epitope Match RD
+# Epitope Match
 
 Pipeline to match reads/sequences to predefined HIV epitopes (HXB2 coordinates) using an identity threshold.
 
