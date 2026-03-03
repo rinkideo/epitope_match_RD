@@ -115,7 +115,7 @@ def main():
     unmatched = []
     summary = []
 
-    print(f"⏳ Starting processing for sample: {sample_id}")
+    print(f"starting processing for sample: {sample_id}")
     for _, row in epitopes.iterrows():
         name = row["Fernando_Approved_Name"]
         start, end = row["CLADEB_GENOME_START"], row["CLADEB_GENOME_END"]
@@ -123,7 +123,7 @@ def main():
 
         epitope_start = time()
         df_epitope, count = process_epitope(ref_nt_seq, all_reads, name)
-        print(f"🧬 {sample_id} | {name}: {count} matches found in {round(time() - epitope_start, 2)} sec")
+        print(f"{sample_id} | {name}: {count} matches found in {round(time() - epitope_start, 2)} sec")
 
         if df_epitope is not None:
             df_epitope.insert(0, "SampleID", sample_id)
@@ -140,7 +140,7 @@ def main():
             for i, (epitope, df) in enumerate(output_tables):
                 sheetname = (epitope[:25] + f"_{i}")[:31]
                 df.to_excel(writer, index=False, sheet_name=sheetname)
-        print(f"✅ Variants written to: {out_path}")
+        print(f"Variants written to: {out_path}")
 
 # === Run main ===
 if __name__ == "__main__":
