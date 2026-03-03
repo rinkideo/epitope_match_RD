@@ -141,6 +141,15 @@ def main():
                 sheetname = (epitope[:25] + f"_{i}")[:31]
                 df.to_excel(writer, index=False, sheet_name=sheetname)
         print(f"Variants written to: {out_path}")
+        
+    if unmatched:
+        unmatched_df = pd.DataFrame(unmatched)
+        unmatched_df.to_csv(os.path.join(outdir, f"{sample_id}_unmatched_{sample_id}.csv"), index=False)
+
+    if summary:
+        summary_df = pd.DataFrame(summary)
+        summary_df.to_csv(os.path.join(outdir, f"{sample_id}_summary_{sample_id}.csv"), index=False)
+        print(f"Summary written to: {sample_id}_summary_{sample_id}.csv")
 
 # === Run main ===
 if __name__ == "__main__":
