@@ -2,6 +2,8 @@
 
 Pipeline to match reads/sequences to predefined HIV epitopes (HXB2 coordinates) using an identity threshold.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18852547.svg)](https://doi.org/10.5281/zenodo.18852547)
+
 ## Repo structure
 - `epitope_match_80perc_th.py`: main script
 - `slurm_epimatch_array.sh`: SLURM array runner
